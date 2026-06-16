@@ -1,0 +1,1966 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="../images/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+<link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+<title>UYE Conference 2026 - Report & Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --brand: #101036;
+  --brand-soft: #1F1B5C;
+  --brand-accent: #FFD447;
+  --brand-coral: #F26B5E;
+  --ink: #101036;
+  --ink-soft: #4A4868;
+  --bg: #FAFAFC;
+  --card: #FFFFFF;
+  --border: rgba(16, 16, 54, 0.10);
+  --shadow: 0 6px 28px rgba(16, 16, 54, 0.08);
+  --shadow-lg: 0 14px 50px rgba(16, 16, 54, 0.16);
+  --display-font: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --body-font: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+html, body {
+  font-family: var(--body-font);
+  color: var(--ink);
+  line-height: 1.65;
+  background: var(--bg);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 { font-family: var(--body-font); }
+.display { font-family: var(--display-font); letter-spacing: -0.01em; text-transform: uppercase; font-weight: 800; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+
+.hero {
+  position: relative;
+  color: white;
+  padding: 72px 20px 120px;
+  text-align: center;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(16, 16, 54, 0.78) 0%, rgba(16, 16, 54, 0.92) 100%),
+    url('../images/2026/Crowd.jpg') center/cover no-repeat;
+}
+.hero-content { position: relative; z-index: 2; max-width: 920px; margin: 0 auto; }
+
+.hero-logo {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 24px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+.hero-logo img { width: 100%; height: 100%; object-fit: cover; }
+
+.hero-eyebrow {
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  border: 1.5px solid var(--brand-accent);
+  color: var(--brand-accent);
+}
+.hero h1.display {
+  font-size: clamp(2.4rem, 6vw, 4.6rem);
+  line-height: 1;
+  margin-bottom: 24px;
+  text-shadow: 0 4px 30px rgba(0,0,0,0.3);
+}
+.hero h1 .accent { color: var(--brand-accent); }
+.hero .tagline {
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  font-weight: 300;
+  max-width: 720px;
+  margin: 0 auto 40px;
+  opacity: 0.95;
+}
+.hero-meta {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.hero-meta-item { display: flex; align-items: center; gap: 10px; opacity: 0.95; }
+.hero-meta-item svg { width: 18px; height: 18px; color: var(--brand-accent); }
+
+
+.nav {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  z-index: 100;
+  box-shadow: 0 2px 14px rgba(16, 16, 54, 0.05);
+}
+.nav-inner {
+  display: flex;
+  gap: 4px;
+  overflow-x: hidden;
+  padding: 14px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  scrollbar-width: thin;
+}
+.nav-inner::-webkit-scrollbar { height: 4px; }
+.nav-inner::-webkit-scrollbar-thumb { background: var(--brand); border-radius: 4px; }
+.nav-btn {
+  background: transparent;
+  border: none;
+  color: var(--ink-soft);
+  padding: 10px 18px;
+  border-radius: 0;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  position: relative;
+}
+.nav-btn:hover { color: var(--brand); }
+.nav-btn.active { color: var(--brand); }
+.nav-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -14px;
+  left: 18px;
+  right: 18px;
+  height: 3px;
+  background: var(--brand-accent);
+}
+
+
+.stats-section {
+  margin-top: -80px;
+  padding: 0 20px 70px;
+  position: relative;
+  z-index: 3;
+}
+.stats-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0;
+  background: white;
+  border-radius: 4px;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+.stat-card {
+  text-align: center;
+  padding: 32px 16px;
+  transition: background 0.2s ease;
+  border-right: 1px solid var(--border);
+}
+.stat-card:last-child { border-right: none; }
+.stat-card:hover { background: rgba(255, 212, 71, 0.08); }
+.stat-number {
+  font-family: var(--display-font);
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--brand);
+  line-height: 1;
+  display: block;
+  letter-spacing: -0.02em;
+  font-weight: 900;
+}
+.stat-label {
+  font-size: 0.72rem;
+  color: var(--ink-soft);
+  margin-top: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .stat-card { border-right: none; border-bottom: 1px solid var(--border); }
+}
+
+
+section.content {
+  padding: 80px 20px;
+  scroll-margin-top: 80px;
+}
+section.content.dark {
+  background: var(--brand);
+  color: white;
+}
+section.content.dark .section-title { color: white; }
+section.content.dark .prose { color: rgba(255,255,255,0.85); }
+section.content.alt { background: white; }
+
+.section-eyebrow {
+  color: var(--brand-coral);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 14px;
+}
+section.content.dark .section-eyebrow { color: var(--brand-accent); }
+.section-title {
+  font-family: var(--display-font);
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--brand);
+  margin-bottom: 6px;
+  line-height: 1;
+}
+.section-divider {
+  width: 70px;
+  height: 4px;
+  background: var(--brand-accent);
+  margin: 22px 0 36px;
+}
+.prose {
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  max-width: 850px;
+  font-weight: 400;
+}
+.prose p { margin-bottom: 18px; }
+
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+@media (max-width: 820px) { .two-col { grid-template-columns: 1fr; gap: 32px; } }
+.story-grid { grid-template-columns: 440px 1fr; align-items: center; gap: 36px; }
+.story-grid figure { margin: 0; text-align: center; }
+.story-grid figcaption { margin-top: 12px; line-height: 1.3; }
+.story-grid figcaption .name { font-weight: 600; color: var(--ink); }
+.story-grid figcaption .role { color: var(--ink-soft); font-size: 0.9rem; }
+@media (max-width: 820px) { .story-grid { grid-template-columns: 1fr; justify-items: center; } }
+
+
+.photo-block {
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+.photo-block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  aspect-ratio: 4 / 3;
+}
+
+
+.card {
+  background: white;
+  padding: 32px;
+  border-radius: 4px;
+  box-shadow: var(--shadow);
+  border-top: 4px solid var(--brand-accent);
+}
+.card-title {
+  font-family: var(--display-font);
+  font-size: 1.4rem;
+  color: var(--brand);
+  margin-bottom: 14px;
+  letter-spacing: -0.01em;
+}
+
+
+.story-block {
+  margin-top: 56px;
+  padding-top: 48px;
+  border-top: 1px solid var(--border);
+}
+.story-block .card-title { font-size: 1.6rem; margin-bottom: 24px; }
+
+
+.values-band {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 36px;
+}
+.value-item {
+  padding: 24px 0;
+  border-top: 3px solid var(--brand-accent);
+}
+.value-item h4 {
+  font-family: var(--display-font);
+  font-size: 1.35rem;
+  color: white;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+.value-item p { font-size: 0.94rem; color: rgba(255,255,255,0.78); }
+
+
+.accordion { display: grid; gap: 10px; margin-top: 24px; }
+.accordion-item {
+  background: white;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+.accordion-item:hover { border-color: var(--brand); }
+.accordion-item.open { border-color: var(--brand); box-shadow: var(--shadow); }
+.accordion-header {
+  width: 100%;
+  background: white;
+  border: none;
+  padding: 22px 26px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  transition: background 0.2s ease;
+}
+.accordion-header:hover { background: rgba(16, 16, 54, 0.02); }
+.accordion-number {
+  font-family: var(--display-font);
+  font-size: 1.4rem;
+  color: var(--brand-coral);
+  width: 36px;
+  flex-shrink: 0;
+}
+.accordion-title {
+  flex: 1;
+  font-weight: 700;
+  color: var(--brand);
+  font-size: 1.05rem;
+}
+.accordion-arrow {
+  color: var(--brand);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+.accordion-item.open .accordion-arrow { transform: rotate(180deg); }
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.accordion-body-inner {
+  padding: 0 26px 24px 80px;
+  color: var(--ink-soft);
+  font-size: 1rem;
+}
+.accordion-item.open .accordion-body { max-height: 320px; }
+
+
+.tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 28px;
+  border-bottom: 2px solid var(--border);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.tabs::-webkit-scrollbar { display: none; }
+.tab-btn {
+  background: none;
+  border: none;
+  padding: 14px 20px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+.tab-btn:hover { color: var(--brand); }
+.tab-btn.active { color: var(--brand); }
+.tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--brand-accent);
+}
+.tab-panel { display: none; animation: fadeIn 0.3s ease; }
+.tab-panel.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+.region-title {
+  font-family: var(--display-font);
+  color: var(--brand);
+  margin-bottom: 16px;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  letter-spacing: -0.01em;
+}
+.region-count {
+  background: var(--brand-accent);
+  color: var(--brand);
+  font-family: var(--body-font);
+  font-size: 0.72rem;
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.school-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 10px;
+  list-style: none;
+}
+.school-list li {
+  background: white;
+  padding: 14px 16px;
+  border-radius: 4px;
+  font-size: 0.92rem;
+  color: var(--ink);
+  border-left: 3px solid var(--brand-accent);
+  box-shadow: 0 1px 3px rgba(16, 16, 54, 0.04);
+  transition: all 0.15s ease;
+}
+.school-list li:hover { transform: translateX(3px); box-shadow: 0 4px 12px rgba(16, 16, 54, 0.08); }
+
+
+.hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+.hub-card {
+  background: white;
+  padding: 28px;
+  border-radius: 4px;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  border-top: 4px solid var(--brand);
+}
+.hub-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-top-color: var(--brand-accent); }
+.hub-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 4px;
+  background: var(--brand);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  transition: background 0.25s ease;
+}
+.hub-card:hover .hub-icon { background: var(--brand-accent); color: var(--brand); }
+.hub-card h4 {
+  font-family: var(--display-font);
+  color: var(--brand);
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+}
+.hub-card ul { list-style: none; font-size: 0.9rem; color: var(--ink-soft); }
+.hub-card li {
+  padding: 5px 0;
+  padding-left: 18px;
+  position: relative;
+}
+.hub-card li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 8px;
+  height: 8px;
+  background: var(--brand-accent);
+}
+.hub-card a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.hub-card a:hover {
+  color: var(--brand);
+  border-bottom-color: var(--brand-accent);
+}
+
+
+.discovery-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+  margin-top: 36px;
+}
+.discovery-card {
+  background: var(--brand);
+  color: white;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+.discovery-image {
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.discovery-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(16, 16, 54, 0.6) 100%);
+}
+.discovery-body { padding: 32px; }
+.discovery-tag {
+  display: inline-block;
+  background: var(--brand-accent);
+  color: var(--brand);
+  padding: 4px 12px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.discovery-card h4 {
+  font-family: var(--display-font);
+  font-size: 1.6rem;
+  margin-bottom: 14px;
+  letter-spacing: -0.01em;
+}
+.discovery-card p { opacity: 0.92; font-size: 0.98rem; }
+
+
+.workshops {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+.workshop {
+  background: white;
+  padding: 24px;
+  border-radius: 4px;
+  border: 2px solid var(--border);
+  text-align: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.workshop:hover {
+  border-color: var(--brand);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+.workshop:focus-visible {
+  outline: 3px solid var(--brand-coral);
+  outline-offset: 2px;
+}
+.workshop-icon { font-size: 2rem; margin-bottom: 12px; }
+.workshop-title {
+  font-family: var(--display-font);
+  color: var(--brand);
+  margin-bottom: 6px;
+  font-size: 1.1rem;
+  letter-spacing: -0.01em;
+}
+.workshop-tag {
+  font-size: 0.72rem;
+  color: var(--brand-coral);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+.workshop-more {
+  margin-top: 14px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--brand);
+  opacity: 0.55;
+  transition: opacity 0.2s ease;
+}
+.workshop:hover .workshop-more { opacity: 1; }
+
+
+.session-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 30, 33, 0.6);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+  z-index: 1000;
+}
+.session-overlay.open { opacity: 1; visibility: visible; }
+.session-modal {
+  background: white;
+  border-radius: 6px;
+  max-width: 760px;
+  width: 100%;
+  max-height: calc(100vh - 32px);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  border-top: 6px solid var(--brand-accent);
+  transform: translateY(20px);
+  transition: transform 0.25s ease;
+}
+.session-overlay.open .session-modal { transform: translateY(0); }
+.session-modal-header {
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 56px 16px 28px;
+  border-bottom: 2px solid var(--border);
+}
+.session-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background: var(--brand-accent);
+  color: var(--brand);
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.session-modal-close:hover { background: var(--brand); color: var(--brand-accent); }
+.session-modal-icon { font-size: 2.2rem; flex-shrink: 0; line-height: 1; }
+.session-modal-heading { min-width: 0; }
+.session-modal-tag {
+  font-size: 0.7rem;
+  color: var(--brand-coral);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+.session-modal-title {
+  font-family: var(--display-font);
+  color: var(--brand);
+  font-size: 1.4rem;
+  margin: 2px 0 0;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+.session-modal-body {
+  padding: 18px 28px 24px;
+  overflow-y: auto;
+}
+.session-modal-desc {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0 0 18px;
+}
+.session-parts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px 24px;
+}
+.session-part-label {
+  font-family: var(--display-font);
+  font-size: 1.05rem;
+  color: var(--brand);
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+.session-people-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--brand-coral);
+  margin-bottom: 10px;
+}
+.session-people-label:not(:first-child) { margin-top: 16px; }
+.session-people {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 12px 10px;
+  margin-bottom: 4px;
+}
+
+.session-person { text-align: center; }
+.session-person img,
+.session-person-fallback {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid var(--brand-accent);
+  margin: 0 auto 6px;
+  background: var(--brand-accent);
+}
+.session-person img { object-fit: cover; display: block; }
+.session-person-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--brand);
+  color: var(--brand-accent);
+  font-family: var(--display-font);
+  font-size: 1.1rem;
+}
+.session-person-name {
+  font-weight: 700;
+  color: var(--brand);
+  font-size: 0.82rem;
+  line-height: 1.2;
+}
+.session-person-role {
+  color: var(--ink-soft);
+  font-size: 0.72rem;
+  line-height: 1.3;
+  margin-top: 2px;
+}
+
+
+.session-host { margin-bottom: 4px; }
+.session-host .session-person {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-align: left;
+  background: rgba(16, 16, 54, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+.session-host .session-person img,
+.session-host .session-person-fallback {
+  margin: 0;
+  flex-shrink: 0;
+}
+.session-host .session-person-text { min-width: 0; }
+
+
+.timeline {
+  position: relative;
+  margin-top: 30px;
+  padding-left: 36px;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--brand-accent);
+}
+.timeline-item {
+  position: relative;
+  padding-bottom: 30px;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -34px;
+  top: 6px;
+  width: 18px;
+  height: 18px;
+  background: var(--brand-accent);
+  border: 3px solid var(--brand);
+  border-radius: 50%;
+}
+.timeline-title {
+  font-family: var(--display-font);
+  color: var(--brand);
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+  letter-spacing: -0.01em;
+}
+.timeline-desc {
+  color: var(--ink-soft);
+  font-size: 0.96rem;
+}
+
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+}
+.impact-item {
+  background: white;
+  padding: 26px 22px;
+  border-radius: 4px;
+  border-bottom: 4px solid var(--brand-accent);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease;
+}
+.impact-item:hover { transform: translateY(-3px); }
+.impact-item h5 {
+  font-family: var(--display-font);
+  color: var(--brand);
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+.impact-item p {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+
+.fund-list { display: grid; gap: 12px; margin-top: 22px; }
+.fund-item {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 16px;
+  align-items: center;
+  padding: 16px 20px;
+  background: white;
+  border-radius: 4px;
+  border-left: 4px solid var(--brand-accent);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease;
+}
+.fund-item:hover { transform: translateX(4px); }
+.fund-icon-circle {
+  width: 36px;
+  height: 36px;
+  background: var(--brand);
+  color: var(--brand-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+.fund-item span { color: var(--ink); font-size: 0.98rem; font-weight: 500; }
+
+
+.conclusion-cta {
+  background:
+    linear-gradient(135deg, rgba(16, 16, 54, 0.92), rgba(16, 16, 54, 0.96)),
+    url('../images/2026/stairs.jpg') center/cover no-repeat;
+  color: white;
+  padding: 70px 30px;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 40px;
+  border-top: 6px solid var(--brand-accent);
+}
+.conclusion-cta h3 {
+  font-family: var(--display-font);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  margin-bottom: 18px;
+  letter-spacing: -0.01em;
+}
+.conclusion-cta p {
+  opacity: 0.92;
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 1.02rem;
+  font-weight: 300;
+}
+
+
+.speaker-card {
+  margin-top: 36px;
+  padding: 32px;
+  background: white;
+  border-radius: 4px;
+  border-left: 5px solid var(--brand-accent);
+  box-shadow: var(--shadow);
+}
+.speaker-card .card-title { color: var(--brand); }
+.speaker-feature {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px 24px;
+  margin-top: 24px;
+}
+.speaker-feature .session-person {
+  text-align: center;
+  width: auto;
+  min-width: 150px;
+}
+.speaker-feature .session-person img,
+.speaker-feature .session-person-fallback {
+  width: 120px;
+  height: 120px;
+  font-size: 1.9rem;
+}
+.speaker-feature .session-person-name { font-size: 0.92rem; }
+.speaker-feature .session-person-role { font-size: 0.76rem; white-space: nowrap; }
+.speaker-feature .session-person img {
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.speaker-feature .session-person img:hover,
+.speaker-feature .session-person img:focus-visible {
+  transform: scale(1.06);
+  border-color: var(--brand-coral);
+  box-shadow: 0 6px 20px rgba(16, 16, 54, 0.28);
+  outline: none;
+}
+
+
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  background: rgba(16, 16, 54, 0.85);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+  cursor: zoom-out;
+}
+.lightbox-overlay.open { opacity: 1; visibility: visible; }
+.lightbox-img {
+  max-width: 92vw;
+  max-height: 88vh;
+  width: auto;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5);
+  transform: scale(0.96);
+  transition: transform 0.25s ease;
+}
+.lightbox-overlay.open .lightbox-img { transform: scale(1); }
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.lightbox-close:hover { background: rgba(255, 255, 255, 0.3); }
+
+
+footer {
+  background: var(--brand);
+  color: rgba(255,255,255,0.7);
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+footer .footer-mark {
+  font-family: var(--display-font);
+  color: var(--brand-accent);
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  letter-spacing: 0.05em;
+}
+
+
+@media (max-width: 600px) {
+  .hero { padding: 70px 20px 120px; }
+  section.content { padding: 50px 16px; }
+  .accordion-body-inner { padding-left: 26px; }
+  .card { padding: 24px; }
+  .discovery-body { padding: 24px; }
+  .conclusion-cta { padding: 50px 24px; }
+}
+
+</style>
+</head>
+<body>
+
+
+<header class="hero">
+  <div class="hero-content">
+    <div class="hero-logo">
+      <img src="../images/logo.png" alt="UYE Logo">
+    </div>
+    <span class="hero-eyebrow">Uncover Your Essence</span>
+    <h1 class="display">Conference 2026<br><span class="accent">Report &amp; Plan</span></h1>
+    <p class="tagline">Equipping and empowering individuals, families, and communities to embrace their identity, uncover their potential, and lead with purpose.</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        April 20, 2026
+      </div>
+      <div class="hero-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Halifax Convention Centre
+      </div>
+      <div class="hero-meta-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        1,600+ Attendees
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<div class="stats-section">
+  <div class="stats-grid">
+    <div class="stat-card"><span class="stat-number" data-target="1600" data-suffix="+">0</span><div class="stat-label">Youth &amp; Chaperones</div></div>
+    <div class="stat-card"><span class="stat-number" data-target="75" data-suffix="+">0</span><div class="stat-label">Schools</div></div>
+    <div class="stat-card"><span class="stat-number" data-target="29">0</span><div class="stat-label">Hub Orgs</div></div>
+    <div class="stat-card"><span class="stat-number" data-target="30" data-suffix="+">0</span><div class="stat-label">Speakers</div></div>
+    <div class="stat-card"><span class="stat-number" data-target="128">0</span><div class="stat-label">Rural Students</div></div>
+    <div class="stat-card"><span class="stat-number" data-target="68" data-suffix="%">0</span><div class="stat-label">BIPOC Identifying</div></div>
+  </div>
+</div>
+
+
+<nav class="nav">
+  <div class="nav-inner" id="nav-inner">
+    <button class="nav-btn active" data-target="about">About</button>
+    <button class="nav-btn" data-target="overview">Overview</button>
+    <button class="nav-btn" data-target="values">Core Values</button>
+    <button class="nav-btn" data-target="objectives">Objectives</button>
+    <button class="nav-btn" data-target="participants">Participants</button>
+    <button class="nav-btn" data-target="hub">Knowledge Hub</button>
+    <button class="nav-btn" data-target="discovery">Discovery Zone</button>
+    <button class="nav-btn" data-target="program">Program</button>
+    <button class="nav-btn" data-target="equity">Equity</button>
+    <button class="nav-btn" data-target="evaluation">Evaluation</button>
+    <button class="nav-btn" data-target="next">Next Steps</button>
+  </div>
+</nav>
+
+
+<section class="content" id="about">
+  <div class="container">
+    <div class="section-eyebrow">Our Foundation</div>
+    <h2 class="section-title">About Us</h2>
+    <div class="section-divider"></div>
+    <div class="two-col">
+      <div class="prose">
+        <p>Uncover Your Essence (UYE) is a non-profit organization based in Nova Scotia, dedicated to equipping and empowering individuals, families, and communities to confidently embrace their identity, uncover their potential, and lead with purpose.</p>
+        <p>Our mission is to foster environments and initiatives that promote personal growth, self-care, and self-love, thereby boosting self-confidence and self-esteem among individuals and communities. We believe that by nurturing these qualities, we can inspire leadership and purposeful living.</p>
+      </div>
+      <div class="photo-block">
+        <img src="../images/2026/volunteers.jpg" alt="" loading="lazy">
+      </div>
+    </div>
+
+    <div class="story-block">
+      <div class="card-title">Our Story</div>
+      <div class="two-col story-grid">
+        <figure>
+          <div class="photo-block">
+            <img src="../images/Team_cropped.jpg" loading="lazy" style="aspect-ratio: 1080 / 600; object-fit: cover;">
+          </div>
+          <figcaption>
+            <div class="name">UYE 2026 Team</div>
+          </figcaption>
+        </figure>
+        <div class="prose" style="color: var(--ink-soft); font-size: 0.98rem;">
+          <p style="margin-top: 12px;">Our organization grew from the experiences and community work of founder Tiffani Young. Running self-care workshops in her business, she saw how many youth were struggling with challenges she had navigated herself, and set out to do something about it.</p>
+          <p style="margin-top: 12px;">That vision became Uncover Your Essence Society, focused on closing gaps in representation, exposure, and access to resources that many young people face.</p>
+          <p style="margin-top: 12px;">UYE&rsquo;s first initiative was the 2025 Uncover Your Essence Conference for youth 13-18. After a successful inaugural year, it returned for a second time, continuing to empower youth through connection, education, representation, and opportunity.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="content alt" id="overview">
+  <div class="container">
+    <div class="section-eyebrow">A Transformative Day</div>
+    <h2 class="section-title">Conference Overview</h2>
+    <div class="section-divider"></div>
+    <div class="two-col">
+      <div class="photo-block">
+        <img src="../images/2026/crowd2.jpg" alt="" loading="lazy">
+      </div>
+      <div class="prose">
+        <p>The second annual Uncover Your Essence (UYE) Conference, held on April 20, 2026, at the Halifax Convention Centre, brought together more than 1,500 youth, chaperones, speakers, performers, and community leaders from across Nova Scotia for a transformative day of empowerment and connection.</p>
+        <p>Targeting youth aged 13-18, the conference offered a full-day immersive experience centered around self-esteem, leadership development, cultural identity, and career readiness. The event featured a dynamic mix of breakout sessions, panel discussions, access to 29 interactive booths within the Fun &amp; Knowledge Hub, and our newly introduced Discovery Zone.</p>
+        <p>What made UYE 2026 especially impactful was its continued intentionality for provincial representation. Every speaker, host, and participating organization is based in Nova Scotia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="content dark" id="values">
+  <div class="container">
+    <div class="section-eyebrow">How We Create Lasting Impact</div>
+    <h2 class="section-title">Core Values</h2>
+    <div class="section-divider"></div>
+    <p class="prose" style="color: rgba(255,255,255,0.85);">The four pillars that guide every UYE program and event.</p>
+    <div class="values-band">
+      <div class="value-item">
+        <h4>Empowerment</h4>
+        <p>We equip people with confidence, skills, and leadership tools to recognize their strengths and lead with purpose.</p>
+      </div>
+      <div class="value-item">
+        <h4>Representation</h4>
+        <p>We amplify diverse voices and visible role models so people can see themselves in what is possible.</p>
+      </div>
+      <div class="value-item">
+        <h4>Community</h4>
+        <p>We create spaces that foster connection, belonging, and collaboration rooted in partnership and shared growth.</p>
+      </div>
+      <div class="value-item">
+        <h4>Self-Love</h4>
+        <p>We center identity, well-being, and self-worth supporting people to grow with confidence and care.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="content" id="objectives">
+  <div class="container">
+    <div class="section-eyebrow">Seven Pillars</div>
+    <h2 class="section-title">Conference Objectives</h2>
+    <div class="section-divider"></div>
+    <p class="prose">The Uncover Your Essence (UYE) Conference 2026 was designed with the following key objectives. Click each to learn more.</p>
+    <div class="accordion" id="objectives-acc">
+      <div class="accordion-item open">
+        <button class="accordion-header">
+          <div class="accordion-number">01</div>
+          <div class="accordion-title">Empower Youth to Build Self-Confidence and Self-Esteem</div>
+          <svg class="accordion-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-body"><div class="accordion-body-inner">Create a supportive environment where youth recognize their inherent worth, talents, and leadership potential.</div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">
+          <div class="accordion-number">02</div>
+          <div class="accordion-title">Foster Leadership Development and Purpose-Driven Growth</div>
+          <svg class="accordion-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-body"><div class="accordion-body-inner">Provide youth with tools, mentorship, and exposure to leadership pathways that equip them to lead confidently in their homes, schools, and communities.</div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">
+          <div class="accordion-number">03</div>
+          <div class="accordion-title">Promote Cultural Awareness and Identity</div>
+          <svg class="accordion-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-body"><div class="accordion-body-inner">Celebrate the diverse identities of Nova Scotian youth while fostering pride in cultural heritage and community connections.</div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">
+          <div class="accordion-number">04</div>
+          <div class="accordion-title">Enhance Access to Career, Post-Secondary, and Entrepreneurial Opportunities</div>
+          <svg class="accordion-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-body"><div class="accordion-body-inner">Connect youth to real-world opportunities in education, trades, entrepreneurship, arts, STEM, and other career pathways through workshops, speakers, and the Fun &amp; Knowledge Station.</div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">
+          <div class="accordion-number">05</div>
+          <div class="accordion-title">Support Mental Health and Wellness</div>
+          <svg class="accordion-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-body"><div class="accordion-body-inner">Provide dedicated workshops and resources focused on building resilience, overcoming self-doubt, and promoting overall well-being.</div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">
+          <div class="accordion-number">06</div>
+          <div class="accordion-title">Ensure Equitable Access and Inclusion</div>
+          <svg class="accordion-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-body"><div class="accordion-body-inner">Remove barriers to participation by covering transportation, meals, and event registration at no cost, with a focus on including youth from rural, marginalized, and underserved communities.</div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">
+          <div class="accordion-number">07</div>
+          <div class="accordion-title">Spark Long-Term Engagement Beyond the Conference</div>
+          <svg class="accordion-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-body"><div class="accordion-body-inner">Develop new initiatives informed by youth voices and continued post-event follow-up to encourage ongoing youth involvement, innovation, and leadership development.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="content alt" id="participants">
+  <div class="container">
+    <div class="section-eyebrow">Provincial Reach</div>
+    <h2 class="section-title">Participants &amp; Reach</h2>
+    <div class="section-divider"></div>
+    <div class="prose">
+      <p>The UYE Conference 2026 welcomed over 1,500 youth and chaperones from more than 75 schools across Nova Scotia and 1 from New Brunswick, making it the largest youth empowerment gathering of its kind in the province.</p>
+    </div>
+
+    <div class="tabs" id="participants-tabs" style="margin-top: 30px;">
+      <button class="tab-btn active" data-tab="hrce">HRCE (24)</button>
+      <button class="tab-btn" data-tab="ccrce">CCRCE (10)</button>
+      <button class="tab-btn" data-tab="avrce">AVRCE (10)</button>
+      <button class="tab-btn" data-tab="orgs">HRM Youth Orgs</button>
+      <button class="tab-btn" data-tab="indep">Independent</button>
+    </div>
+
+    <div class="tab-panel active" data-panel="hrce">
+      <div class="region-title">Halifax Regional Centre for Education <span class="region-count">24 schools</span></div>
+      <ul class="school-list">
+        <li>Auburn Drive High</li>
+        <li>Bedford and Forsyth Education Centre</li>
+        <li>Bicentennial School</li>
+        <li>Charles P. Allen High</li>
+        <li>Citadel High</li>
+        <li>Clayton Park Junior High</li>
+        <li>Cole Harbour High</li>
+        <li>Dartmouth High</li>
+        <li>Dartmouth South Academy</li>
+        <li>Fairview Junior High</li>
+        <li>Gorsebrook Junior High</li>
+        <li>Halifax Central Junior High</li>
+        <li>Halifax West Junior High</li>
+        <li>Highland Park Junior High</li>
+        <li>Island View High</li>
+        <li>J.L. Isley High</li>
+        <li>John Martin Junior High</li>
+        <li>Lockview High</li>
+        <li>Millwood High</li>
+        <li>Oxford Junior High</li>
+        <li>Rockingstone Heights Junior High</li>
+        <li>Rocky Lake Junior High</li>
+        <li>Sackville Heights Junior High</li>
+        <li>West Bedford High</li>
+      </ul>
+    </div>
+
+    <div class="tab-panel" data-panel="ccrce">
+      <div class="region-title">Chignecto-Central Regional Centre for Education <span class="region-count">10 schools</span></div>
+      <ul class="school-list">
+        <li>Amherst Regional High School</li>
+        <li>Bible Hill Junior High</li>
+        <li>Dr W.A. MacLeod Consolidated School</li>
+        <li>Hants East Rural High</li>
+        <li>Hants North Rural High</li>
+        <li>New Glasgow Academy</li>
+        <li>Northumberland Regional High</li>
+        <li>Pugwash District High</li>
+        <li>Riverside Education Centre</li>
+        <li>South Colchester Academy</li>
+      </ul>
+    </div>
+
+    <div class="tab-panel" data-panel="avrce">
+      <div class="region-title">Annapolis Valley Regional Centre for Education <span class="region-count">10 schools</span></div>
+      <ul class="school-list">
+        <li>Annapolis West Education Centre</li>
+        <li>Avon View High</li>
+        <li>Bridgetown Regional Community School</li>
+        <li>Central Kings Rural High</li>
+        <li>Hortons High</li>
+        <li>Kings County Academy</li>
+        <li>Middleton Regional High</li>
+        <li>Northeast Kings Education Centre</li>
+        <li>West Kings District High</li>
+        <li>Wolfville School</li>
+      </ul>
+    </div>
+
+    <div class="tab-panel" data-panel="orgs">
+      <div class="region-title">HRM Youth Organisations <span class="region-count">2 organizations</span></div>
+      <ul class="school-list">
+        <li>Boys &amp; Girls Club of Preston</li>
+        <li>Upper Hammonds Plains Community Development Association</li>
+      </ul>
+    </div>
+
+    <div class="tab-panel" data-panel="indep">
+      <div class="region-title">Independent Participants <span class="region-count">25 youth</span></div>
+      <p style="color: var(--ink-soft); font-size: 0.95rem; margin-bottom: 16px;">25 youth attended independently, representing 3 additional HRCE schools, 4 Conseil Scolaire Acadien Provincial (CSAP) schools, and 3 homeschooled students.</p>
+      <ul class="school-list">
+        <li>École du Carrefour</li>
+        <li>École Mer et Monde</li>
+        <li>École Secondaire Mosaique</li>
+        <li>École Secondaire du Sommet</li>
+        <li>Ellenvale Junior High</li>
+        <li>Graham Creighton Junior High</li>
+        <li>Woodlawn High</li>
+      </ul>
+    </div>
+
+    <div class="speaker-card">
+      <div class="card-title">Speakers &amp; Hosts</div>
+      <p style="color: var(--ink-soft); font-size: 0.98rem;">30+ dynamic speakers and session hosts brought the day to life. All speakers were Nova Scotia-based leaders, allowing youth to see themselves reflected in professionals from their own province.</p>
+      <div class="speaker-feature">
+        <div class="session-person">
+          <img src="../images/2026/leah-icon.jpg" data-full="../images/2026/leah.jpg" alt="Honourable Leah Martin" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'session-person-fallback',textContent:'LM'}))">
+          <div class="session-person-text">
+            <div class="session-person-name">Honourable Leah Martin</div>
+            <div class="session-person-role">Minister of Youth</div>
+          </div>
+        </div>
+        <div class="session-person">
+          <img src="../images/2026/carrie-icon.jpg" data-full="../images/2026/carrie.jpg" alt="Carrie Hage" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'session-person-fallback',textContent:'CH'}))">
+          <div class="session-person-text">
+            <div class="session-person-name">Carrie Hage</div>
+            <div class="session-person-role">Rideau Hall Foundation representative</div>
+          </div>
+        </div>
+        <div class="session-person">
+          <img src="../images/2026/otni-icon.jpg" data-full="../images/2026/otni.jpg" alt="Otni Asare-Adjei" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'session-person-fallback',textContent:'OA'}))">
+          <div class="session-person-text">
+            <div class="session-person-name">Otni Asare-Adjei</div>
+            <div class="session-person-role">Entrepreneur &amp; community leader</div>
+          </div>
+        </div>
+        <div class="session-person">
+          <img src="../images/2026/keonte-icon.jpg" data-full="../images/2026/keonte.jpg" alt="Keonte Beals" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'session-person-fallback',textContent:'KB'}))">
+          <div class="session-person-text">
+            <div class="session-person-name">Keonte Beals</div>
+            <div class="session-person-role">Recording artist &amp; performer</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="content" id="hub">
+  <div class="container">
+    <div class="section-eyebrow">29 Organizations</div>
+    <h2 class="section-title">Fun &amp; Knowledge Hub</h2>
+    <div class="section-divider"></div>
+    <p class="prose">A vibrant, hands-on expo space gave youth the opportunity to explore opportunities in a fun, inspiring, and approachable environment.</p>
+
+    <div class="hub-grid">
+      <div class="hub-card">
+        <div class="hub-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <h4>Post-Secondary</h4>
+        <ul>
+          <li><a href="https://www.acadiau.ca/" target="_blank" rel="noopener">Acadia University</a></li>
+          <li><a href="https://www.dal.ca/faculty/management.html" target="_blank" rel="noopener">Dalhousie University Faculty of Management</a></li>
+          <li><a href="https://www.nscc.ca/" target="_blank" rel="noopener">Nova Scotia Community College</a></li>
+          <li><a href="https://www.theprepacademy.ca/" target="_blank" rel="noopener">Prep Academy</a></li>
+          <li><a href="https://www.smu.ca/" target="_blank" rel="noopener">Saint Mary's University</a></li>
+          <li><a href="https://dbdli.ca/" target="_blank" rel="noopener">Delmore 'Buddy' Daye Learning Institute</a></li>
+        </ul>
+      </div>
+
+      <div class="hub-card">
+        <div class="hub-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h4>Trades &amp; Apprenticeship</h4>
+        <ul>
+          <li><a href="https://www.nsapprenticeship.ca/" target="_blank" rel="noopener">Nova Scotia Apprenticeship Agency</a></li>
+          <li><a href="https://www.eventseast.com/" target="_blank" rel="noopener">Events East</a></li>
+        </ul>
+      </div>
+
+      <div class="hub-card">
+        <div class="hub-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <h4>Leadership &amp; Entrepreneurship</h4>
+        <ul>
+          <li><a href="https://janovascotia.ca/" target="_blank" rel="noopener">JA Nova Scotia</a></li>
+          <li><a href="https://www.tribenetwork.ca/" target="_blank" rel="noopener">Tribe Network</a></li>
+          <li><a href="https://businessisjammin.ca/" target="_blank" rel="noopener">Business is Jammin'</a></li>
+          <li><a href="https://www.rcmp-grc.gc.ca/en/nova-scotia" target="_blank" rel="noopener">RCMP</a>, <a href="https://www.halifax.ca/fire-police/police" target="_blank" rel="noopener">HRP</a></li>
+          <li><a href="https://novascotia.ca/just/" target="_blank" rel="noopener">Department of Justice Divisions</a></li>
+        </ul>
+      </div>
+
+      <div class="hub-card">
+        <div class="hub-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </div>
+        <h4>Health &amp; Wellbeing</h4>
+        <ul>
+          <li><a href="https://www.iwk.nshealth.ca/" target="_blank" rel="noopener">IWK Health</a></li>
+          <li><a href="https://www.instagram.com/runwithdereerunclub/" target="_blank" rel="noopener">Run with Dere</a></li>
+          <li><a href="https://www.facebook.com/people/Period-Equity-Alliance-Society/61556194212303/" target="_blank" rel="noopener">Period Equity Alliance</a></li>
+          <li><a href="https://novascotia.ca/dhw/ehs/" target="_blank" rel="noopener">Emergency Health Services (EHS)</a></li>
+          <li><a href="https://www.mymnfc.com/" target="_blank" rel="noopener">Mi'kmaw Native Friendship Centre</a></li>
+        </ul>
+      </div>
+
+      <div class="hub-card">
+        <div class="hub-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1.5" fill="currentColor"/><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/></svg>
+        </div>
+        <h4>Interactive STEM</h4>
+        <ul>
+          <li><a href="https://www.imhotep.ca/en/" target="_blank" rel="noopener">Imhotep's Legacy Academy</a></li>
+          <li><a href="https://supernova.dal.ca/" target="_blank" rel="noopener">Supernova Dalhousie</a></li>
+          <li><a href="https://thediscoverycentre.ca/" target="_blank" rel="noopener">Discovery Centre</a></li>
+          <li><a href="https://ulnoowegeducation.ca/" target="_blank" rel="noopener">Ulnooweg Education Centre</a></li>
+        </ul>
+      </div>
+
+      <div class="hub-card">
+        <div class="hub-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c1.1 0 2-.9 2-2 0-.5-.2-1-.6-1.4-.4-.4-.6-.9-.6-1.4 0-1.1.9-2 2-2h2.4c3 0 5.4-2.4 5.4-5.4C22.6 5.4 17.8 2 12 2z"/><circle cx="6.5" cy="12.5" r="1.5"/><circle cx="9.5" cy="7.5" r="1.5"/><circle cx="14.5" cy="7.5" r="1.5"/><circle cx="17.5" cy="12.5" r="1.5"/></svg>
+        </div>
+        <h4>Creative Arts</h4>
+        <ul>
+          <li><a href="https://www.theansma.com/" target="_blank" rel="noopener">ANSMA</a></li>
+          <li><a href="https://macpheecentre.ca/" target="_blank" rel="noopener">MacPhee Centre for Creative Learning</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="content alt" id="discovery">
+  <div class="container">
+    <div class="section-eyebrow">New in 2026</div>
+    <h2 class="section-title">Discovery Zone</h2>
+    <div class="section-divider"></div>
+    <div class="prose">
+      <p>The Discovery Zone was a vibrant, interactive hub that brought creativity, skill, and storytelling to life through live demonstrations and real-time audience engagement. Designed to move beyond traditional booths, this space allowed youth to experience careers and creative pathways in action.</p>
+    </div>
+
+    <div class="discovery-features">
+      <div class="discovery-card">
+        <div class="discovery-image" style="background-image: url('../images/2026/Barber.jpg'); background-position: 30% 0%;"></div>
+        <div class="discovery-body">
+          <span class="discovery-tag">Live Demo</span>
+          <h4>Barbering Showcase</h4>
+          <p><strong>Nathaniel Johnson</strong>, a barber, showcased his craft while sharing his personal journey in the industry. This activation gave attendees insight into the discipline, entrepreneurship, and creativity involved in barbering, while highlighting it as a viable and rewarding career path.</p>
+        </div>
+      </div>
+      <div class="discovery-card">
+        <div class="discovery-image" style="background-image: url('../images/2026/beats.jpg');"></div>
+        <div class="discovery-body">
+          <span class="discovery-tag">Live Music</span>
+          <h4>Beat-Making Session</h4>
+          <p><strong>KekeBeatz</strong>, a music producer, led a live beat-making session alongside an artist, collaboratively creating a song in real time. Youth contributed ideas, sounds, direction, and vocals, becoming part of the creative process and seeing themselves as creators.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="content" id="program">
+  <div class="container">
+    <div class="section-eyebrow">Day at a Glance</div>
+    <h2 class="section-title">Program Highlights</h2>
+    <div class="section-divider"></div>
+
+    <div class="two-col">
+      <div>
+        <p class="prose" style="margin-bottom: 20px;">A full day designed for energy, engagement, and exploration.</p>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-title">Arrival &amp; Breakfast</div>
+            <div class="timeline-desc">1,443 youth arrived via 36 chartered or school buses, 4 taxis, and 1 shuttle taxi. Volunteers welcomed attendees into the Fun &amp; Knowledge Hub for a catered handheld breakfast.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-title">Opening Ceremonies</div>
+            <div class="timeline-desc">Performance by Studio 26; opening remarks by Otni Asare-Adjei; National Anthem and Lift Every Voice by Keonté Beals; remarks from Carrie Hage and Hon. Leah Martin; DJ Shaed energized the room.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-title">Breakout Sessions</div>
+            <div class="timeline-desc">Youth chose from six inspiring workshops, each with a panel of two to four experts and a host, all active leaders in their respective fields.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-title">Lunch &amp; Networking</div>
+            <div class="timeline-desc">Catered lunch accommodating various dietary needs. Youth continued to explore the Fun &amp; Knowledge Hub and network.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-title">Departure</div>
+            <div class="timeline-desc">Schools gradually began their departure from designated hubs supported by UYE volunteers.</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 class="display" style="font-size: 1.4rem; color: var(--brand); margin-bottom: 6px;">Six Breakout Workshops</h3>
+        <p style="color: var(--ink-soft); font-size: 0.94rem; margin-bottom: 6px;">Tailored to youth interests and future aspirations.</p>
+        <div class="workshops">
+          <div class="workshop" role="button" tabindex="0" data-session="athlete">
+            <div class="workshop-icon">🏀</div>
+            <div class="workshop-title">Succeeding as a Student Athlete</div>
+            <div class="workshop-tag">Sports</div>
+            <div class="workshop-more">View session ↗</div>
+          </div>
+          <div class="workshop" role="button" tabindex="0" data-session="postsecondary">
+            <div class="workshop-icon">🎓</div>
+            <div class="workshop-title">Preparing for Post Secondary</div>
+            <div class="workshop-tag">Education</div>
+            <div class="workshop-more">View session ↗</div>
+          </div>
+          <div class="workshop" role="button" tabindex="0" data-session="bethechange">
+            <div class="workshop-icon">✊</div>
+            <div class="workshop-title">Be the Change</div>
+            <div class="workshop-tag">Leadership</div>
+            <div class="workshop-more">View session ↗</div>
+          </div>
+          <div class="workshop" role="button" tabindex="0" data-session="tools">
+            <div class="workshop-icon">🛠️</div>
+            <div class="workshop-title">Tools for the Future</div>
+            <div class="workshop-tag">Entrepreneurship</div>
+            <div class="workshop-more">View session ↗</div>
+          </div>
+          <div class="workshop" role="button" tabindex="0" data-session="steam">
+            <div class="workshop-icon">🔬</div>
+            <div class="workshop-title">STEAM</div>
+            <div class="workshop-tag">Science &amp; Arts</div>
+            <div class="workshop-more">View session ↗</div>
+          </div>
+          <div class="workshop" role="button" tabindex="0" data-session="brighter">
+            <div class="workshop-icon">💚</div>
+            <div class="workshop-title">Brighter Future</div>
+            <div class="workshop-tag">Health</div>
+            <div class="workshop-more">View session ↗</div>
+          </div>
+        </div>
+
+        <div style="margin-top: 28px; padding: 28px; background: var(--brand-accent); border-radius: 4px;">
+          <div class="display" style="font-size: 1.3rem; color: var(--brand); margin-bottom: 8px;">Key Takeaway</div>
+          <p style="font-size: 0.98rem; color: var(--brand); font-weight: 500;">The energy, excitement, and sense of belonging among youth were palpable. Many youth, educators, and community members expressed that they are already looking forward to UYE 2027!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="content alt" id="equity">
+  <div class="container">
+    <div class="section-eyebrow">Inclusion By Design</div>
+    <h2 class="section-title">Equity &amp; Accessibility</h2>
+    <div class="section-divider"></div>
+
+    <div class="two-col">
+      <div class="prose">
+        <p>Diversity, Equity, Inclusion and Accessibility were top of mind when designing and executing this conference. Youth from marginalized and underserved communities represented over 70% of attendees.</p>
+        <p>The event provided free transportation, accessible buses, accommodation, meals, a quiet room, an accessible venue, speakers and volunteers that represent various communities.</p>
+      </div>
+      <div>
+        <h3 class="display" style="font-size: 1.4rem; color: var(--brand); margin-bottom: 16px;">Use of Funds &amp; Impact</h3>
+        <div class="fund-list">
+          <div class="fund-item">
+            <div class="fund-icon-circle">🚌</div>
+            <span>Cover transportation for rural students</span>
+          </div>
+          <div class="fund-item">
+            <div class="fund-icon-circle">🏫</div>
+            <span>Cover transportation for students within HRM</span>
+          </div>
+          <div class="fund-item">
+            <div class="fund-icon-circle">♿</div>
+            <span>Support event logistics, volunteers, and accessibility services</span>
+          </div>
+          <div class="fund-item">
+            <div class="fund-icon-circle">🍽️</div>
+            <span>Provide meals, speaker honorariums, and printed materials</span>
+          </div>
+          <div class="fund-item">
+            <div class="fund-icon-circle">📣</div>
+            <span>Pre-event and post-event engagement activities</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="content" id="evaluation">
+  <div class="container">
+    <div class="section-eyebrow">Measuring Success</div>
+    <h2 class="section-title">Evaluation Highlights</h2>
+    <div class="section-divider"></div>
+
+    <div class="prose">
+      <p>Feedback received from speakers, hosts, volunteers, and attendees consistently rated the conference as top tier in terms of organization, content, and youth engagement.</p>
+    </div>
+
+    <h3 class="display" style="font-size: 1.4rem; color: var(--brand); margin-top: 36px; margin-bottom: 8px;">Key Impact Areas</h3>
+    <p style="color: var(--ink-soft); font-size: 0.95rem; max-width: 850px;">Based on pre-event engagement and conference feedback, several priority areas for continued youth development were identified.</p>
+
+    <div class="impact-grid">
+      <div class="impact-item">
+        <h5>Entrepreneurship</h5>
+        <p>Economic empowerment and small business pathways</p>
+      </div>
+      <div class="impact-item">
+        <h5>Health &amp; Wellness</h5>
+        <p>Mental and physical wellbeing support</p>
+      </div>
+      <div class="impact-item">
+        <h5>Skilled Trades</h5>
+        <p>Apprenticeship awareness and exposure</p>
+      </div>
+      <div class="impact-item">
+        <h5>STEAM Education</h5>
+        <p>Innovation including artificial intelligence</p>
+      </div>
+      <div class="impact-item">
+        <h5>Leadership</h5>
+        <p>Community engagement and civic skills</p>
+      </div>
+    </div>
+
+    <div class="two-col" style="margin-top: 40px;">
+      <div class="card">
+        <div class="card-title">Outcomes - Youth</div>
+        <p style="color: var(--ink-soft); font-size: 0.98rem;">Youth participants reported increased self-confidence, greater awareness of career and educational pathways, and a stronger connection to resources and opportunities.</p>
+      </div>
+      <div class="card">
+        <div class="card-title">Outcomes - Partners</div>
+        <p style="color: var(--ink-soft); font-size: 0.98rem;">Partner organizations praised the event's logistics, flow, and youth-centered approach, emphasizing the depth of engagement and excitement among participants.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="content alt" id="next">
+  <div class="container">
+    <div class="section-eyebrow">Looking Ahead</div>
+    <h2 class="section-title">Next Steps</h2>
+    <div class="section-divider"></div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-title">Ongoing Engagement</div>
+        <div class="timeline-desc">Follow-up outreach and engagement activities will continue through June 2026, providing additional opportunities for youth to remain connected and for feedback collection.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-title">Post-Event Evaluation</div>
+        <div class="timeline-desc">A detailed survey was distributed throughout the conference and will continue to participating youth, schools, and chaperones during the week of May 3, 2026, focusing on overall satisfaction, knowledge gained, skills developed, and areas for future programming.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-title">2026-2027 Planning</div>
+        <div class="timeline-desc">Learning from the UYE 2026 Conference will directly inform the structure, partnerships, and programming for UYE's expansion across the region, including rural Nova Scotia and New Brunswick, as well as the development of UYE 2027.</div>
+      </div>
+    </div>
+
+    <div class="conclusion-cta">
+      <h3 class="display">Thank You</h3>
+      <p>The Uncover Your Essence Conference 2026 successfully met its objectives and delivered a meaningful experience for youth across Nova Scotia. With the generous support of our funders, we were able to continue our mission to remove barriers, inspire confidence, and create space for future leaders. We look forward to continued collaboration and expanding our impact in the years ahead.</p>
+    </div>
+  </div>
+</section>
+
+<div class="session-overlay" id="session-overlay" role="dialog" aria-modal="true" aria-labelledby="session-modal-title">
+  <div class="session-modal">
+    <div class="session-modal-header">
+      <button class="session-modal-close" id="session-modal-close" aria-label="Close">&times;</button>
+      <div class="session-modal-icon" id="session-modal-icon"></div>
+      <div class="session-modal-heading">
+        <div class="session-modal-tag" id="session-modal-tag"></div>
+        <h3 class="session-modal-title" id="session-modal-title"></h3>
+      </div>
+    </div>
+    <div class="session-modal-body">
+      <p class="session-modal-desc" id="session-modal-desc"></p>
+      <div id="session-modal-people"></div>
+    </div>
+  </div>
+</div>
+
+
+<div class="lightbox-overlay" id="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Full-size image">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+document.querySelectorAll('.accordion-item').forEach(item => {
+  const header = item.querySelector('.accordion-header');
+  header.addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.accordion-item').forEach(other => other.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const tab = btn.dataset.tab;
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelector(`.tab-panel[data-panel="${tab}"]`).classList.add('active');
+  });
+});
+const navBtns = document.querySelectorAll('.nav-btn');
+navBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = document.getElementById(btn.dataset.target);
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+
+const sections = document.querySelectorAll('section.content');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.id;
+      navBtns.forEach(b => b.classList.toggle('active', b.dataset.target === id));
+      const activeBtn = document.querySelector(`.nav-btn[data-target="${id}"]`);
+      if (activeBtn) {
+        const navInner = document.getElementById('nav-inner');
+        const btnLeft = activeBtn.offsetLeft;
+        const navWidth = navInner.clientWidth;
+        navInner.scrollTo({ left: btnLeft - navWidth / 2 + activeBtn.clientWidth / 2, behavior: 'smooth' });
+      }
+    }
+  });
+}, { rootMargin: '-40% 0px -55% 0px' });
+sections.forEach(s => observer.observe(s));
+const animateCounter = (el) => {
+  const target = parseInt(el.dataset.target, 10);
+  const suffix = el.dataset.suffix || '';
+  const duration = 1400;
+  const startTime = performance.now();
+  const step = (now) => {
+    const elapsed = now - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const value = Math.floor(eased * target);
+    el.textContent = value.toLocaleString() + (progress === 1 ? suffix : '');
+    if (progress < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+};
+
+const statObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateCounter(entry.target);
+      statObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.4 });
+document.querySelectorAll('.stat-number').forEach(el => statObserver.observe(el));
+const sessionData = {
+  athlete: {
+    icon: '🏀', tag: 'Sports', title: 'Succeeding as a Student Athlete',
+    desc: 'This session supports youth who are balancing academics, athletics, and personal growth. Panelists share their journeys as student-athletes — including the discipline, time management, and mindset needed to succeed both in the classroom and in sport. It ran twice, each with its own host and panel.',
+    parts: [
+      {
+        label: 'Session 1',
+        host: { name: 'Moussa Sangré-Ponce', role: 'Soccer coach, journalist & former university scout; Acadia Axewomen coaching staff', img: '../images/2026/speakers/moussa-sangre-ponce.jpg' },
+        speakers: [
+          { name: 'Kayla McKinnon', img: '../images/2026/speakers/kayla-mckinnon.jpg' },
+          { name: 'Elle Gould', img: '../images/2026/speakers/elle-gould.jpg' }
+        ]
+      },
+      {
+        label: 'Session 2',
+        host: { name: 'Mikayla Nassy-Wong', role: 'Sport administration professional & former collegiate athlete; Compliance Graduate Assistant, Northern State University', img: '../images/2026/speakers/mikayla-nassy-wong.jpg' },
+        speakers: [
+          { name: 'Daneesha Provo', img: '../images/2026/speakers/daneesha-provo.jpg' },
+          { name: 'Mykeo Parker-Christmas', img: '../images/2026/speakers/mykeo-parker-christmas.jpg' },
+          { name: 'Kai Lyngo', img: '../images/2026/speakers/kai-lyngo.jpg' }
+        ]
+      }
+    ]
+  },
+  postsecondary: {
+    icon: '🎓', tag: 'Education', title: 'Preparing for Post Secondary',
+    desc: 'This session helps youth feel confident and informed as they prepare for college, university, or alternative education pathways. Panelists discuss how to choose programs, apply to schools, access financial aid and scholarships, and adjust to the academic and social transition after high school.',
+    host: null,
+    speakers: [
+      { name: 'Amber Cain', img: '../images/2026/speakers/amber-cain.jpg' },
+      { name: 'Amberina Beals', img: '../images/2026/speakers/amberina-beals.jpg' },
+      { name: 'Bryson Fitzpatrick', img: '../images/2026/speakers/bryson-fitzpatrick.jpg' },
+      { name: 'Shain Carpenter', img: '../images/2026/speakers/shain-carpenter.jpg' }
+    ]
+  },
+  bethechange: {
+    icon: '✊', tag: 'Leadership', title: 'Be the Change',
+    desc: 'This session empowers youth to recognize their voice and leadership potential. Panelists discuss developing confidence, navigating challenges, and creating community impact — covering self-advocacy, communication, goal-setting, and overcoming self-doubt.',
+    host: { name: 'Peter Oyedijo', role: "Special Advisor to NS Minister of Addictions & Mental Health; community board leader", img: '../images/2026/speakers/peter-oyedijo.jpg' },
+    speakers: [
+      { name: 'Kyle Sarka', img: '../images/2026/speakers/kyle-sarka.jpg' },
+      { name: 'Shianne Gordon', img: '../images/2026/speakers/shianne-gordon.jpg' },
+      { name: 'Fenessa Williams', img: '../images/2026/speakers/fenessa-williams.jpg' }
+    ]
+  },
+  tools: {
+    icon: '🛠️', tag: 'Entrepreneurship', title: 'Tools for the Future',
+    desc: 'This session explores two powerful career pathways and how youth can build meaningful, hands-on, opportunity-driven futures. Panelists discuss apprenticeships — including how to begin and the trade options available — as well as entrepreneurship for leadership, creativity, and community impact.',
+    host: { name: 'Deborah Sanni', role: 'Ecosystem builder & partnerships strategist; Co-founder, CXRE Labs', img: '../images/2026/speakers/deborah-sanni.jpg' },
+    speakers: [
+      { name: 'Deneika Coakley', img: '../images/2026/speakers/deneika-coakley.jpg' },
+      { name: 'Rory Fox', img: '../images/2026/speakers/rory-fox.jpg' },
+      { name: 'Ilona Inman', img: '../images/2026/speakers/ilona-inman.jpg' }
+    ]
+  },
+  steam: {
+    icon: '🔬', tag: 'Science & Arts', title: 'STEAM',
+    desc: 'This session introduces youth to the world of STEAM through real stories, innovation, creativity, and problem-solving. Panelists share how curiosity led them into technology, engineering, design, research, and creative fields — covering emerging industries, mentorship, and how technical and artistic skills shape future work.',
+    host: { name: 'Lauren Cullen', role: 'Artist, facilitator & critical craft researcher; Ph.D. in Communication and Culture', img: '../images/2026/speakers/lauren-cullen.jpg' },
+    speakers: [
+      { name: 'Joy Akinkunmi', img: '../images/2026/speakers/joy-akinkunmi.jpg' },
+      { name: 'Dr. Weishan Wang', img: '../images/2026/speakers/weishan-wang.jpg' },
+      { name: 'Dena Williams', img: '../images/2026/speakers/dena-williams.jpg' },
+      { name: 'Abady Alzahrani', img: '../images/2026/speakers/abady-alzahrani.jpg' }
+    ]
+  },
+  brighter: {
+    icon: '💚', tag: 'Health', title: 'Brighter Future',
+    desc: 'This session supports youth in understanding wellness as a foundation for success in every area of life. Panelists discuss physical health, nutrition, rest, emotional well-being, stress management, and building healthy routines.',
+    host: { name: 'Jenna Kedy', role: 'Healthcare advocate & public speaker; CMA Patient Voice Board member', img: '../images/2026/speakers/jenna-kedy.jpg' },
+    speakers: [
+      { name: 'Mitch Doell', img: '../images/2026/speakers/mitch-doell.jpg' },
+      { name: 'Rajean Willis', img: '../images/2026/speakers/rajean-willis.jpg' },
+      { name: 'Kadeem Joseph', img: '../images/2026/speakers/kadeem-joseph.jpg' }
+    ]
+  }
+};
+
+const overlay = document.getElementById('session-overlay');
+const modalIcon = document.getElementById('session-modal-icon');
+const modalTag = document.getElementById('session-modal-tag');
+const modalTitle = document.getElementById('session-modal-title');
+const modalDesc = document.getElementById('session-modal-desc');
+const modalPeople = document.getElementById('session-modal-people');
+
+const personHTML = (p) => {
+  const initials = p.name.replace(/^Dr\.\s*/, '').split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase();
+  const img = p.img
+    ? `<img src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'session-person-fallback',textContent:'${initials}'}))">`
+    : `<div class="session-person-fallback">${initials}</div>`;
+  return `<div class="session-person">${img}<div class="session-person-text"><div class="session-person-name">${p.name}</div>${p.role ? `<div class="session-person-role">${p.role}</div>` : ''}</div></div>`;
+};
+
+const openSession = (key) => {
+  const s = sessionData[key];
+  if (!s) return;
+  modalIcon.textContent = s.icon;
+  modalTag.textContent = s.tag;
+  modalTitle.textContent = s.title;
+  modalDesc.textContent = s.desc;
+  const groupHTML = (g) => {
+    let h = '';
+    if (g.host) {
+      h += `<div class="session-people-label">Session Host</div>`;
+      h += '<div class="session-host">' + personHTML(g.host) + '</div>';
+    }
+    if (g.speakers && g.speakers.length) {
+      h += `<div class="session-people-label">Panel Speakers</div>`;
+      h += '<div class="session-people">' + g.speakers.map(personHTML).join('') + '</div>';
+    }
+    return h;
+  };
+  let html = '';
+  if (s.parts && s.parts.length) {
+    html = '<div class="session-parts">' + s.parts.map(p =>
+      '<div class="session-part">' +
+      (p.label ? `<div class="session-part-label">${p.label}</div>` : '') +
+      groupHTML(p) +
+      '</div>'
+    ).join('') + '</div>';
+  } else {
+    html = groupHTML(s);
+  }
+  modalPeople.innerHTML = html;
+  overlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+};
+
+const closeSession = () => {
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+};
+
+document.querySelectorAll('.workshop[data-session]').forEach(card => {
+  card.addEventListener('click', () => openSession(card.dataset.session));
+  card.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openSession(card.dataset.session); }
+  });
+});
+overlay.addEventListener('click', (e) => { if (e.target === overlay) closeSession(); });
+document.getElementById('session-modal-close').addEventListener('click', closeSession);
+const lightbox = document.getElementById('lightbox-overlay');
+const lightboxImg = document.getElementById('lightbox-img');
+const openLightbox = (src, alt) => {
+  lightboxImg.src = src;
+  lightboxImg.alt = alt || '';
+  lightbox.classList.add('open');
+  document.body.style.overflow = 'hidden';
+};
+const closeLightbox = () => {
+  lightbox.classList.remove('open');
+  document.body.style.overflow = '';
+};
+document.querySelectorAll('.speaker-feature .session-person img').forEach(img => {
+  img.setAttribute('tabindex', '0');
+  img.setAttribute('role', 'button');
+  const full = img.dataset.full || img.src;
+  img.addEventListener('click', () => openLightbox(full, img.alt));
+  img.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(full, img.alt); }
+  });
+});
+lightbox.addEventListener('click', closeLightbox);
+document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    if (lightbox.classList.contains('open')) closeLightbox();
+    else closeSession();
+  }
+});
+</script>
+
+</body>
+</html>
