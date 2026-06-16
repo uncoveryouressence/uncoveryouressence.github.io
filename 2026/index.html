@@ -909,6 +909,45 @@ section.content.dark .section-eyebrow { color: var(--brand-accent); }
   font-weight: 300;
 }
 
+.sponsors-section {
+  margin-top: 56px;
+  padding-top: 48px;
+  border-top: 1px solid var(--border);
+}
+.sponsors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-auto-rows: 132px;
+  gap: 18px;
+  align-items: center;
+}
+.sponsor-logo-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  box-shadow: 0 2px 12px rgba(16, 16, 54, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.sponsor-logo-link:hover,
+.sponsor-logo-link:focus-visible {
+  transform: translateY(-3px);
+  border-color: var(--brand-accent);
+  box-shadow: var(--shadow);
+  outline: none;
+}
+.sponsor-logo-link img {
+  max-width: 100%;
+  max-height: 86px;
+  object-fit: contain;
+  display: block;
+}
+
 
 .speaker-card {
   margin-top: 36px;
@@ -1399,21 +1438,12 @@ footer .footer-mark {
 
       <div class="hub-card">
         <div class="hub-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
-        </div>
-        <h4>Trades &amp; Apprenticeship</h4>
-        <ul>
-          <li><a href="https://www.nsapprenticeship.ca/" target="_blank" rel="noopener">Nova Scotia Apprenticeship Agency</a></li>
-          <li><a href="https://www.eventseast.com/" target="_blank" rel="noopener">Events East</a></li>
-        </ul>
-      </div>
-
-      <div class="hub-card">
-        <div class="hub-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
         </div>
-        <h4>Leadership &amp; Entrepreneurship</h4>
+        <h4>Leadership, Careers &amp; Entrepreneurship</h4>
         <ul>
+          <li><a href="https://novascotia.ca/coms/" target="_blank" rel="noopener">Department of Opportunities and Social Development</a></li>
+          <li><a href="https://www.eventseast.com/" target="_blank" rel="noopener">Events East</a></li>
           <li><a href="https://janovascotia.ca/" target="_blank" rel="noopener">JA Nova Scotia</a></li>
           <li><a href="https://www.tribenetwork.ca/" target="_blank" rel="noopener">Tribe Network</a></li>
           <li><a href="https://businessisjammin.ca/" target="_blank" rel="noopener">Business is Jammin'</a></li>
@@ -1433,6 +1463,7 @@ footer .footer-mark {
           <li><a href="https://www.facebook.com/people/Period-Equity-Alliance-Society/61556194212303/" target="_blank" rel="noopener">Period Equity Alliance</a></li>
           <li><a href="https://novascotia.ca/dhw/ehs/" target="_blank" rel="noopener">Emergency Health Services (EHS)</a></li>
           <li><a href="https://www.mymnfc.com/" target="_blank" rel="noopener">Mi'kmaw Native Friendship Centre</a></li>
+          <li><a href="https://women.novascotia.ca/" target="_blank" rel="noopener">Nova Scotia Status of Women</a></li>
         </ul>
       </div>
 
@@ -1695,6 +1726,43 @@ footer .footer-mark {
       <h3 class="display">Thank You</h3>
       <p>The Uncover Your Essence Conference 2026 successfully met its objectives and delivered a meaningful experience for youth across Nova Scotia. With the generous support of our funders, we were able to continue our mission to remove barriers, inspire confidence, and create space for future leaders. We look forward to continued collaboration and expanding our impact in the years ahead.</p>
     </div>
+
+    <div class="sponsors-section" aria-labelledby="sponsors-title">
+      <h2 class="section-title" id="sponsors-title">Sponsors</h2>
+      <div class="section-divider"></div>
+      <div class="sponsors-grid">
+        <a class="sponsor-logo-link" href="https://naturalbutterbar.com/" target="_blank" rel="noopener" aria-label="Natural Butter Bar">
+          <img src="../images/2026/sponsors/natural-butter-bar.png" alt="Natural Butter Bar" loading="lazy">
+        </a>
+        <a class="sponsor-logo-link" href="https://zinoconsulting.com/" target="_blank" rel="noopener" aria-label="Zino Consulting">
+          <img src="../images/2026/sponsors/zino-consulting.png" alt="Zino Consulting" loading="lazy">
+        </a>
+        <a class="sponsor-logo-link" href="https://rhf-frh.ca/" target="_blank" rel="noopener" aria-label="Rideau Hall Foundation">
+          <img src="../images/2026/sponsors/rideau-hall-foundation.png" alt="Rideau Hall Foundation" loading="lazy">
+        </a>
+        <a class="sponsor-logo-link" href="https://www.crrf-fcrr.ca/" target="_blank" rel="noopener" aria-label="Canadian Race Relations Foundation">
+          <img src="../images/2026/sponsors/canadian-race-relations-foundation.png" alt="Canadian Race Relations Foundation" loading="lazy">
+        </a>
+        <a class="sponsor-logo-link" href="https://www.td.com/ca/en/personal-banking" target="_blank" rel="noopener" aria-label="TD Bank">
+          <img src="../images/2026/sponsors/td-bank.png" alt="TD Bank" loading="lazy">
+        </a>
+        <a class="sponsor-logo-link" href="https://halifaxstanfield.ca/airport-authority/programs-partnerships/uplifted/" target="_blank" rel="noopener" aria-label="Halifax Stanfield International Airport">
+          <img src="../images/2026/sponsors/halifax-stanfield-international-airport.png" alt="Halifax Stanfield International Airport" loading="lazy">
+        </a>
+        <a class="sponsor-logo-link" href="https://ansa.novascotia.ca/" target="_blank" rel="noopener" aria-label="Government of Nova Scotia - African Nova Scotian Affairs">
+          <img src="../images/2026/sponsors/african-nova-scotian-affairs.png" alt="Government of Nova Scotia - African Nova Scotian Affairs" loading="lazy">
+        </a>
+        <a class="sponsor-logo-link" href="https://www.prabbis.com/" target="_blank" rel="noopener" aria-label="Prabbis Consulting">
+          <img src="../images/2026/sponsors/prabbis-consulting.png" alt="Prabbis Consulting" loading="lazy">
+        </a>
+        <a class="sponsor-logo-link" href="https://women.novascotia.ca/" target="_blank" rel="noopener" aria-label="Nova Scotia Status of Women Office">
+          <img src="../images/2026/sponsors/nova-scotia-status-of-women.png" alt="Nova Scotia Status of Women Office" loading="lazy">
+        </a>
+        <a class="sponsor-logo-link" href="https://iwkhealth.ca/" target="_blank" rel="noopener" aria-label="IWK Health">
+          <img src="../images/2026/sponsors/iwk-health.jpg" alt="IWK Health" loading="lazy">
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1799,7 +1867,8 @@ const sessionData = {
         host: { name: 'Moussa Sangré-Ponce', role: 'Soccer coach, journalist & former university scout; Acadia Axewomen coaching staff', img: '../images/2026/speakers/moussa-sangre-ponce.jpg' },
         speakers: [
           { name: 'Kayla McKinnon', img: '../images/2026/speakers/kayla-mckinnon.jpg' },
-          { name: 'Elle Gould', img: '../images/2026/speakers/elle-gould.jpg' }
+          { name: 'Elle Gould', img: '../images/2026/speakers/elle-gould.jpg' },
+          { name: 'Gabe Moshett' }
         ]
       },
       {
@@ -1878,7 +1947,7 @@ const personHTML = (p) => {
   const initials = p.name.replace(/^Dr\.\s*/, '').split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase();
   const img = p.img
     ? `<img src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'session-person-fallback',textContent:'${initials}'}))">`
-    : `<div class="session-person-fallback">${initials}</div>`;
+    : '';
   return `<div class="session-person">${img}<div class="session-person-text"><div class="session-person-name">${p.name}</div>${p.role ? `<div class="session-person-role">${p.role}</div>` : ''}</div></div>`;
 };
 
