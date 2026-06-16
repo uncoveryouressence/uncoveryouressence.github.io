@@ -149,13 +149,22 @@
     opacity: 0;
     transition: opacity 0.25s ease;
   }
-  .report-card:hover {
+  .report-card:not(.report-card--disabled):hover {
     transform: translateY(-4px);
     border-color: var(--brand-accent);
     background: rgba(255, 255, 255, 0.08);
     box-shadow: 0 18px 50px rgba(0,0,0,0.35);
   }
-  .report-card:hover::before { opacity: 1; }
+  .report-card:not(.report-card--disabled):hover::before { opacity: 1; }
+
+  .report-card--disabled {
+    opacity: 0.72;
+    cursor: not-allowed;
+  }
+
+  .report-card--disabled .report-cta {
+    color: rgba(255, 255, 255, 0.72);
+  }
 
   .report-year {
     font-family: var(--display-font);
@@ -197,7 +206,7 @@
     height: 14px;
     transition: transform 0.25s ease;
   }
-  .report-card:hover .report-cta svg { transform: translateX(4px); }
+  .report-card:not(.report-card--disabled):hover .report-cta svg { transform: translateX(4px); }
 
   @media (max-width: 540px) {
     .landing { padding: 30px 20px; }
@@ -218,15 +227,12 @@
     <p class="tagline">A look at the difference we made together.</p>
 
     <div class="report-grid">
-      <a class="report-card" href="2025/index.html">
+      <div class="report-card report-card--disabled" aria-disabled="true">
         <div class="report-year">2025</div>
         <div class="report-title">Inaugural Conference</div>
         <div class="report-meta">April 15, 2025 &middot; Halifax Convention Centre</div>
-        <span class="report-cta">
-          View Report
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </span>
-      </a>
+        <span class="report-cta">Report Coming Soon</span>
+      </div>
 
       <a class="report-card" href="2026/index.html">
         <div class="report-year">2026</div>
