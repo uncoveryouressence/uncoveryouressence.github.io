@@ -208,6 +208,10 @@
   }
   .report-card:not(.report-card--disabled):hover .report-cta svg { transform: translateX(4px); }
 
+  @media (min-width: 541px) {
+    .report-card--disabled { order: -1; }
+  }
+
   @media (max-width: 540px) {
     .landing { padding: 30px 20px; }
     .tagline { margin-bottom: 24px; }
@@ -227,13 +231,6 @@
     <p class="tagline">A look at the difference we made together.</p>
 
     <div class="report-grid">
-      <div class="report-card report-card--disabled" aria-disabled="true">
-        <div class="report-year">2025</div>
-        <div class="report-title">Inaugural Conference</div>
-        <div class="report-meta">April 15, 2025 &middot; Halifax Convention Centre</div>
-        <span class="report-cta">Report Coming Soon</span>
-      </div>
-
       <a class="report-card" href="/2026/">
         <div class="report-year">2026</div>
         <div class="report-title">Second Annual Conference</div>
@@ -243,6 +240,13 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </span>
       </a>
+
+      <div class="report-card report-card--disabled" aria-disabled="true">
+        <div class="report-year">2025</div>
+        <div class="report-title">Inaugural Conference</div>
+        <div class="report-meta">April 15, 2025 &middot; Halifax Convention Centre</div>
+        <span class="report-cta">Report Coming Soon</span>
+      </div>
     </div>
   </div>
 </main>
