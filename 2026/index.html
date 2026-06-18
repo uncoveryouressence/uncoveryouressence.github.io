@@ -171,6 +171,12 @@ h1, h2, h3, h4 { font-family: var(--body-font); }
   margin-right: 8px;
   flex-shrink: 0;
 }
+@media (max-width: 480px) {
+  .nav-home-label { display: none; }
+  .nav-btn--home { padding-right: 14px; margin-right: 4px; }
+  .nav-btn { padding: 10px 12px; font-size: 0.76rem; letter-spacing: 0.8px; }
+  .nav-btn.active::after { left: 12px; right: 12px; }
+}
 
 
 .stats-section {
@@ -1126,7 +1132,7 @@ footer .footer-mark {
 
 <nav class="nav">
   <div class="nav-inner">
-    <a class="nav-btn nav-btn--home" href="https://www.uncoveryouressence.com/">&#8592; Home</a>
+    <a class="nav-btn nav-btn--home" href="https://www.uncoveryouressence.com/">&#8592;<span class="nav-home-label"> Home</span></a>
     <div class="nav-scroll" id="nav-inner">
       <button class="nav-btn active" data-target="about">About</button>
       <button class="nav-btn" data-target="overview">Overview</button>
