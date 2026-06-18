@@ -37,6 +37,7 @@ html, body {
   background: var(--bg);
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
 }
 
 h1, h2, h3, h4 { font-family: var(--body-font); }
@@ -176,6 +177,10 @@ h1, h2, h3, h4 { font-family: var(--body-font); }
   .nav-btn--home { padding-right: 14px; margin-right: 4px; }
   .nav-btn { padding: 10px 12px; font-size: 0.76rem; letter-spacing: 0.8px; }
   .nav-btn.active::after { left: 12px; right: 12px; }
+  section.content { padding: 48px 20px; scroll-margin-top: 56px; }
+  .accordion-body-inner { padding: 0 16px 20px 26px; }
+  .hero { padding: 48px 20px 80px; }
+  .conclusion-cta { padding: 44px 20px; }
 }
 
 
@@ -1000,7 +1005,7 @@ section.content.dark .section-eyebrow { color: var(--brand-accent); }
   font-size: 1.9rem;
 }
 .speaker-feature .session-person-name { font-size: 0.92rem; }
-.speaker-feature .session-person-role { font-size: 0.76rem; white-space: nowrap; }
+.speaker-feature .session-person-role { font-size: 0.76rem; }
 .speaker-feature .session-person img {
   cursor: pointer;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
@@ -1083,6 +1088,13 @@ footer .footer-mark {
   .card { padding: 24px; }
   .discovery-body { padding: 24px; }
   .conclusion-cta { padding: 50px 24px; }
+  .school-list { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .school-list li { padding: 10px 12px; font-size: 0.85rem; }
+  .workshops { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .workshop { padding: 16px; }
+  .workshop-icon { font-size: 1.6rem; margin-bottom: 8px; }
+  .impact-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .impact-item { padding: 18px 14px; }
 }
 
 </style>
