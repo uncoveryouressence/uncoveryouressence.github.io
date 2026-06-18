@@ -123,15 +123,20 @@ h1, h2, h3, h4 { font-family: var(--body-font); }
 }
 .nav-inner {
   display: flex;
-  gap: 4px;
-  overflow-x: hidden;
-  padding: 14px 20px;
+  align-items: center;
+  padding: 0 20px;
   max-width: 1200px;
   margin: 0 auto;
-  scrollbar-width: thin;
 }
-.nav-inner::-webkit-scrollbar { height: 4px; }
-.nav-inner::-webkit-scrollbar-thumb { background: var(--brand); border-radius: 4px; }
+.nav-scroll {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  padding: 14px 0;
+  flex: 1;
+  scrollbar-width: none;
+}
+.nav-scroll::-webkit-scrollbar { display: none; }
 .nav-btn {
   background: transparent;
   border: none;
@@ -162,6 +167,7 @@ h1, h2, h3, h4 { font-family: var(--body-font); }
 .nav-btn--home {
   text-decoration: none;
   border-right: 1px solid var(--border);
+  padding-right: 20px;
   margin-right: 8px;
   flex-shrink: 0;
 }
@@ -1124,19 +1130,21 @@ footer .footer-mark {
 
 
 <nav class="nav">
-  <div class="nav-inner" id="nav-inner">
+  <div class="nav-inner">
     <a class="nav-btn nav-btn--home" href="https://www.uncoveryouressence.com/">&#8592; Home</a>
-    <button class="nav-btn active" data-target="about">About</button>
-    <button class="nav-btn" data-target="overview">Overview</button>
-    <button class="nav-btn" data-target="values">Core Values</button>
-    <button class="nav-btn" data-target="objectives">Objectives</button>
-    <button class="nav-btn" data-target="participants">Participants</button>
-    <button class="nav-btn" data-target="hub">Knowledge Hub</button>
-    <button class="nav-btn" data-target="discovery">Discovery Zone</button>
-    <button class="nav-btn" data-target="program">Program</button>
-    <button class="nav-btn" data-target="equity">Equity</button>
-    <button class="nav-btn" data-target="evaluation">Evaluation</button>
-    <button class="nav-btn" data-target="next">Next Steps</button>
+    <div class="nav-scroll" id="nav-inner">
+      <button class="nav-btn active" data-target="about">About</button>
+      <button class="nav-btn" data-target="overview">Overview</button>
+      <button class="nav-btn" data-target="values">Core Values</button>
+      <button class="nav-btn" data-target="objectives">Objectives</button>
+      <button class="nav-btn" data-target="participants">Participants</button>
+      <button class="nav-btn" data-target="hub">Knowledge Hub</button>
+      <button class="nav-btn" data-target="discovery">Discovery Zone</button>
+      <button class="nav-btn" data-target="program">Program</button>
+      <button class="nav-btn" data-target="equity">Equity</button>
+      <button class="nav-btn" data-target="evaluation">Evaluation</button>
+      <button class="nav-btn" data-target="next">Next Steps</button>
+    </div>
   </div>
 </nav>
 
