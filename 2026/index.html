@@ -159,6 +159,12 @@ h1, h2, h3, h4 { font-family: var(--body-font); }
   height: 3px;
   background: var(--brand-accent);
 }
+.nav-btn--home {
+  text-decoration: none;
+  border-right: 1px solid var(--border);
+  margin-right: 8px;
+  flex-shrink: 0;
+}
 
 
 .stats-section {
@@ -947,6 +953,16 @@ section.content.dark .section-eyebrow { color: var(--brand-accent); }
   object-fit: contain;
   display: block;
 }
+.sponsor-text-only {
+  font-family: var(--display-font);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+  line-height: 1.4;
+}
 
 
 .speaker-card {
@@ -1070,10 +1086,8 @@ footer .footer-mark {
 <header class="hero">
   <div class="hero-content">
     <div class="hero-logo">
-		<a href="https://uncoveryouressence.com">
-			<img src="../images/logo.png" alt="UYE Logo">
-		</a>		
-	</div>
+      <img src="../images/logo.png" alt="UYE Logo">
+    </div>
     <span class="hero-eyebrow">Uncover Your Essence</span>
     <h1 class="display">Conference 2026<br><span class="accent">Report &amp; Plan</span></h1>
     <p class="tagline">Equipping and empowering individuals, families, and communities to embrace their identity, uncover their potential, and lead with purpose.</p>
@@ -1109,6 +1123,7 @@ footer .footer-mark {
 
 <nav class="nav">
   <div class="nav-inner" id="nav-inner">
+    <a class="nav-btn nav-btn--home" href="https://www.uncoveryouressence.com/">&#8592; Home</a>
     <button class="nav-btn active" data-target="about">About</button>
     <button class="nav-btn" data-target="overview">Overview</button>
     <button class="nav-btn" data-target="values">Core Values</button>
@@ -1288,7 +1303,7 @@ footer .footer-mark {
     <div class="tabs" id="participants-tabs" style="margin-top: 30px;">
       <button class="tab-btn active" data-tab="hrce">HRCE (24)</button>
       <button class="tab-btn" data-tab="ccrce">CCRCE (10)</button>
-      <button class="tab-btn" data-tab="avrce">AVRCE (10)</button>
+      <button class="tab-btn" data-tab="avrce">AVRCE (20)</button>
       <button class="tab-btn" data-tab="orgs">HRM Youth Orgs</button>
       <button class="tab-btn" data-tab="indep">Independent</button>
     </div>
@@ -1340,7 +1355,7 @@ footer .footer-mark {
     </div>
 
     <div class="tab-panel" data-panel="avrce">
-      <div class="region-title">Annapolis Valley Regional Centre for Education <span class="region-count">10 schools</span></div>
+      <div class="region-title">Annapolis Valley Regional Centre for Education <span class="region-count">20 schools</span></div>
       <ul class="school-list">
         <li>Annapolis West Education Centre</li>
         <li>Avon View High</li>
@@ -1733,35 +1748,50 @@ footer .footer-mark {
       <h2 class="section-title" id="sponsors-title">Sponsors</h2>
       <div class="section-divider"></div>
       <div class="sponsors-grid">
-        <a class="sponsor-logo-link" href="https://naturalbutterbar.com/" target="_blank" rel="noopener" aria-label="Natural Butter Bar">
-          <img src="../images/2026/sponsors/natural-butter-bar.png" alt="Natural Butter Bar" loading="lazy">
-        </a>
-        <a class="sponsor-logo-link" href="https://zinoconsulting.com/" target="_blank" rel="noopener" aria-label="Zino Consulting">
-          <img src="../images/2026/sponsors/zino-consulting.png" alt="Zino Consulting" loading="lazy">
-        </a>
         <a class="sponsor-logo-link" href="https://rhf-frh.ca/" target="_blank" rel="noopener" aria-label="Rideau Hall Foundation">
           <img src="../images/2026/sponsors/rideau-hall-foundation.png" alt="Rideau Hall Foundation" loading="lazy">
-        </a>
-        <a class="sponsor-logo-link" href="https://www.crrf-fcrr.ca/" target="_blank" rel="noopener" aria-label="Canadian Race Relations Foundation">
-          <img src="../images/2026/sponsors/canadian-race-relations-foundation.png" alt="Canadian Race Relations Foundation" loading="lazy">
-        </a>
-        <a class="sponsor-logo-link" href="https://www.td.com/ca/en/personal-banking" target="_blank" rel="noopener" aria-label="TD Bank">
-          <img src="../images/2026/sponsors/td-bank.png" alt="TD Bank" loading="lazy">
-        </a>
-        <a class="sponsor-logo-link" href="https://halifaxstanfield.ca/airport-authority/programs-partnerships/uplifted/" target="_blank" rel="noopener" aria-label="Halifax Stanfield International Airport">
-          <img src="../images/2026/sponsors/halifax-stanfield-international-airport.png" alt="Halifax Stanfield International Airport" loading="lazy">
         </a>
         <a class="sponsor-logo-link" href="https://ansa.novascotia.ca/" target="_blank" rel="noopener" aria-label="Government of Nova Scotia - African Nova Scotian Affairs">
           <img src="../images/2026/sponsors/african-nova-scotian-affairs.png" alt="Government of Nova Scotia - African Nova Scotian Affairs" loading="lazy">
         </a>
-        <a class="sponsor-logo-link" href="https://www.prabbis.com/" target="_blank" rel="noopener" aria-label="Prabbis Consulting">
-          <img src="../images/2026/sponsors/prabbis-consulting.png" alt="Prabbis Consulting" loading="lazy">
-        </a>
         <a class="sponsor-logo-link" href="https://women.novascotia.ca/" target="_blank" rel="noopener" aria-label="Nova Scotia Status of Women Office">
           <img src="../images/2026/sponsors/nova-scotia-status-of-women.png" alt="Nova Scotia Status of Women Office" loading="lazy">
         </a>
+        <a class="sponsor-logo-link" href="https://www.eventseast.com/" target="_blank" rel="noopener" aria-label="Events East">
+          <img src="../images/2026/sponsors/events-east.png" alt="Events East" loading="lazy">
+        </a>
+        <a class="sponsor-logo-link" href="https://www.crrf-fcrr.ca/" target="_blank" rel="noopener" aria-label="Canadian Race Relations Foundation">
+          <img src="../images/2026/sponsors/canadian-race-relations-foundation.png" alt="Canadian Race Relations Foundation" loading="lazy">
+        </a>
+        <a class="sponsor-logo-link" href="https://www.encore-can.com/" target="_blank" rel="noopener" aria-label="Encore">
+          <img src="../images/2026/sponsors/encore.png" alt="Encore" loading="lazy">
+        </a>
         <a class="sponsor-logo-link" href="https://iwkhealth.ca/" target="_blank" rel="noopener" aria-label="IWK Health">
           <img src="../images/2026/sponsors/iwk-health.jpg" alt="IWK Health" loading="lazy">
+        </a>
+        <a class="sponsor-logo-link" href="https://www.dal.ca/" target="_blank" rel="noopener" aria-label="Dalhousie University">
+          <img src="../images/2026/sponsors/dalhousie.svg" alt="Dalhousie University" loading="lazy">
+        </a>
+        <a class="sponsor-logo-link" href="https://www.td.com/ca/en/personal-banking" target="_blank" rel="noopener" aria-label="TD Bank">
+          <img src="../images/2026/sponsors/td-bank.png" alt="TD Bank" loading="lazy">
+        </a>
+        <a class="sponsor-logo-link" href="https://www.prabbis.com/" target="_blank" rel="noopener" aria-label="Prabbis Consulting">
+          <img src="../images/2026/sponsors/prabbis-consulting.png" alt="Prabbis Consulting" loading="lazy">
+        </a>
+        <a class="sponsor-logo-link" href="https://zinoconsulting.com/" target="_blank" rel="noopener" aria-label="Zino Consulting">
+          <img src="../images/2026/sponsors/zino-consulting.png" alt="Zino Consulting" loading="lazy">
+        </a>
+        <a class="sponsor-logo-link" href="https://naturalbutterbar.com/" target="_blank" rel="noopener" aria-label="Natural Butter Bar">
+          <img src="../images/2026/sponsors/natural-butter-bar.png" alt="Natural Butter Bar" loading="lazy">
+        </a>
+        <a class="sponsor-logo-link" href="https://www.tallandsmallmedia.ca/" target="_blank" rel="noopener" aria-label="Tall &amp; Small Media">
+          <img src="../images/2026/sponsors/tallandsmallmedia.jpg" alt="Tall &amp; Small Media" loading="lazy">
+        </a>
+        <a class="sponsor-logo-link" href="https://nathanielraymedia.com/" target="_blank" rel="noopener" aria-label="Nathaniel Ray Media">
+          <img src="../images/2026/sponsors/nathanielraymedia.jpg" alt="Nathaniel Ray Media" loading="lazy">
+        </a>
+        <a class="sponsor-logo-link" href="https://halifaxstanfield.ca/" target="_blank" rel="noopener" aria-label="Halifax Stanfield International Airport">
+          <img src="../images/2026/sponsors/halifax-stanfield-international-airport.png" alt="Halifax Stanfield International Airport" loading="lazy">
         </a>
       </div>
     </div>
